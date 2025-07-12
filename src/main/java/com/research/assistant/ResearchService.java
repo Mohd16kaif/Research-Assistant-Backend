@@ -38,7 +38,7 @@ public class ResearchService {
         );
 
         String response = webClient.post()
-                .uri(geminiApiUrl + geminiApiKey)
+                .uri(geminiApiUrl + "?key=" + geminiApiKey)
                 .bodyValue(requestBody)
                 .retrieve()
                 .bodyToMono(String.class)
